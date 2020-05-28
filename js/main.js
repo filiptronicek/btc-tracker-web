@@ -58,9 +58,6 @@ function updateStats() {
         {
           breakpoint: 1000,
           options: {
-            dataLabels: {
-              enabled: false,
-            },
             series: [
               {
                 data: filteredy,
@@ -107,7 +104,8 @@ function updateStats() {
       yaxis: {
         labels: {
           formatter: function (val) {
-            return Number.parseFloat(val).toFixed(2) + unit;
+            if(unit === '$') return unit + Number.parseFloat(val).toFixed(2);
+            else return Number.parseFloat(val).toFixed(2) + unit;
           },
         },
       },
