@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather charts</title>
+</script>
+</head>
+<body>
+<h1>
+    <label for="rate">BTC in </label>
+    <select name="rate" id="rate" onchange="updateStats()">
+      <option value="czk" default>CZK</option>
+      <option value="usd">USD $</option>
+    </select>
+
+</h1>
+	<div id="chart"></div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+    <script src="js/main.js"> </script>
+</html>
