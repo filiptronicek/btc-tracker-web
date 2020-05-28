@@ -151,4 +151,4 @@ function getDataPointsFromCSV(csv, metric) {
 updateStats();
 setInterval(() => {
   updateStats();
-}, 600000);
+}, 40000);
