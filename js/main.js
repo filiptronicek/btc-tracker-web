@@ -126,7 +126,7 @@ function getDataPointsFromCSV(csv, metric) {
   const dataPoints = (csvLines = points = []);
   csvLines = csv.split(/[\r?\n|\r|\n]+/);
 
-  const maxData = 70;
+  const maxData = 60;
 
   const ratio = (csvLines.length / maxData).toFixed(0);
   console.log(csvLines.length);
