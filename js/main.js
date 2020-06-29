@@ -104,7 +104,7 @@ function updateStats() {
       yaxis: {
         labels: {
           formatter: function (val) {
-            if(unit === '$') return unit + Number.parseFloat(val).toFixed(2);
+            if (unit === "$") return unit + Number.parseFloat(val).toFixed(2);
             else return Number.parseFloat(val).toFixed(2) + unit;
           },
         },
@@ -135,12 +135,12 @@ function getDataPointsFromCSV(csv, metric) {
   const offset = (tz.utcOffset() - (tz.utcOffset() % 60)) / 60;
 
   for (let i = 0; i < csvLines.length; i++)
-    if (csvLines[i].length > 0 && csvLines[i].split(',') && i > 1) {
+    if (csvLines[i].length > 0 && csvLines[i].split(",") && i > 1) {
       points = csvLines[i].split(",");
       const time = points[0].split(" ")[1];
-      if(i % ratio === 0) {
+      if (i % ratio === 0) {
         dataPoints.push({
-          x: (parseFloat(time)+offset) % 24,
+          x: (parseFloat(time) + offset) % 24,
           y: parseInt(points[metric]),
         });
       }
